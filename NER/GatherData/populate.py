@@ -125,7 +125,7 @@ datasets = [
   ("Persian-NER/Persian-NER-part*.txt", None, ConllLikeDatasetNormalizer)
 ]
 
-with open("./train.conll", "w") as f0, open("./test.conll", "w") as f1:
+with open("./data/train.conll", "w") as f0, open("./data/test.conll", "w") as f1:
   train_data = NerDataCollection(f0)
   test_data = NerDataCollection(f1)
   for train_glob_pattern, test_glob_pattern, normalizer_class in datasets:
